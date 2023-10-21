@@ -1,0 +1,15 @@
+syntax = "proto2";
+package apphosting.client.admin_jobs_v3;
+import "apphosting/client/admin_jobs_v3/entity_set_spec.proto";
+option java_package = "com.google.apphosting.client.adminjobsv3";
+option java_outer_classname = "ExportMetadataProto";
+option java_multiple_files = true;
+message OverallExportMetadata {
+  repeated SingleExportMetadataPointer export_pointers = 1;
+}
+message SingleExportMetadataPointer {
+  optional EntitySetSpec entity_set_spec = 1;
+  optional string export_metadata_file = 2;
+  optional int64 num_entities = 3;
+  optional int64 num_bytes = 4;
+}

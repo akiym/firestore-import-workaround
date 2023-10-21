@@ -1,0 +1,22 @@
+syntax = "proto2";
+package apphosting.client.admin_jobs_v3;
+option java_package = "com.google.apphosting.client.adminjobsv3";
+option java_outer_classname = "EntitySetSpecProto";
+option java_multiple_files = true;
+message EntitySetSpec {
+  enum KindType {
+    KIND_TYPE_UNSPECIFIED = 0;
+    ONE_KIND = 1;
+    ALL_KINDS = 2;
+  }
+  enum NamespaceType {
+    NAMESPACE_TYPE_UNSPECIFIED = 0;
+    DEFAULT_NAMESPACE = 1;
+    ONE_NAMESPACE = 2;
+    ALL_NAMESPACES = 3;
+  }
+  optional KindType kind_type = 1;
+  optional string kind = 2;
+  optional NamespaceType namespace_type = 3;
+  optional string namespace = 4;
+}

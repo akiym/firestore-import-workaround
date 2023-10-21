@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "firestore-import-workaround"
+version = "0.1.0"
+description = ""
+authors = ["Takumi Akiyama <t.akiym@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+protobuf = "^4.24.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
