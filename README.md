@@ -77,11 +77,11 @@ gcloud firestore export gs://<bucket_name>
 gsutil -m cp -r "gs://<bucket_name>/<export_dir>" .
 ```
 
-3. Fix exported data with `fix.py`
+3. Fix exported data with `workaround.py`
 
 ```
 poetry install
-poetry run python fix.py <export_dir>
+poetry run python workaround.py <export_dir>
 ```
 
 This modifies `all_namespaces_all_kinds.export_metadata` in the exported data. Please make sure that your exported data is backed up before running this script.
